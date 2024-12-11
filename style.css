@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --green:green;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow:0 .5rem 1.5rem reg(0,0,0,0.1);
+    --border: .2rem solid rgba(0,0,0.1);
+    --outline: 0.1rem solid rgba(0,0,0.1);
+
+}
+
+*{
+    
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all .5s linear;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+body{
+  background: #eee;
+}
+
+/* css code for banner */
+section
+{
+  padding: 2rem 9%;
+
+}
+.heading
+{
+  text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  color: var(--black);
+
+}
+.heading span
+{
+  background: var(--green);
+  color: white;
+  display: inline-block;
+  padding: .5rem 3rem;
+  clip-path: polygon(100% 0,93% 50% , 100% 99% ,0% 100%,7% 50%,0%0% );
+}
+
+
+
+.btn {
+  background-color: var(--green);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--light-color);
+}
+
+.header
+{
+  border: 0px solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: white;
+  box-shadow: var(--box-shadow);
+
+
+}
+.header .logo
+{
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.header .logo i
+{
+  color: var(--green);
+}
+.header .navbar a
+{
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+.header .navbar a:hover
+{
+  color: var(--green);
+}
+.header .icons div
+{
+  border: 0px solid;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: .5rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: .3rem;
+  text-align: center;
+  cursor: pointer;
+
+}
+.header .icons div:hover
+{
+  background: var(--green);
+  color: white;
+}
+#menu-btn{
+  display: none;
+}
+
+.header .navbar.active
+{
+  right: 2rem;
+  transition: .4s linear;
+}
+
+.header .search-form
+{
+  border: 0px solid;
+  position: absolute;
+  top:  110%;
+  right: -110%;
+  width: 50rem;
+  height: 5rem;
+  background: white;
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+.header .search-form.active
+{
+  right: 2rem;
+  transition: .4s linear;
+}
+
+.header .search-form input
+{
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 2rem;
+  color: var(--black);
+  padding: 0 1.5rem;
+
+}
+.header .search-form label
+{
+  font-size: 2.2rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+
+}
+.header .search-form label:hover
+{
+  color: var(--green);
+}
+
+.header .login-form
+{
+  border: 0px solid;
+  position: absolute;
+  width: 32rem;
+  top: 110%;
+  right: -110%;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: .5rem;
+  background: white;
+  text-align: center;
+
+}
+.header .login-form.active
+{
+  right: 2rem;
+  transition: .4s linear;
+}
+
+.header .login-form h3
+{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.header .login-form .box
+{
+  width: 100%;
+  border: 0px solid;
+  margin: .7rem 0;
+  background: #eee;
+  border-radius: .5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+}
+.header .login-form p
+{
+  font-size: 1.4rem;
+  padding: .5rem 0;
+  color: var(--light-color);
+
+}
+.header .login-form p a
+{
+  font-size: 1.4rem;
+  padding: .5rem 0;
+  color: var(--green);
+  text-decoration: underline;
+
+}
+/* CSS file for the registration form */
+.header .register-form {
+  display: none; 
+  position: absolute;
+  right: 0; 
+  background-color: #fff; 
+  z-index: 1000; 
+  border: 0px solid;
+  width: 32rem;
+  top: 110%;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: .5rem;
+  background: white;
+  text-align: center;
+}
+.header .register-form h3
+{
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.header .register-form .box {
+  width: 100%;
+  border: 0px solid;
+  margin: .7rem 0;
+  background: #eee;
+  border-radius: .5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.header .register-form .btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50; /* Set a background color for the button */
+  color: #fff; /* Set the text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header .register-form .btn:hover {
+  background-color: #45a049; /* Darken the button color on hover */
+}
+
+.header .register-form p {
+  font-size: 1.4rem;
+  padding: .5rem 0;
+  color: var(--light-color);
+
+}
+
+.header .register-form a {
+  font-size: 1.4rem;
+  padding: .5rem 0;
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.header .register-form a:hover {
+  text-decoration: underline;
+}
+
+.home 
+{
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  background: url(../image/img-1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+
+}
+
+.home .content
+{
+  border: 0px solid;
+  text-align: center;
+  top: 100%;
+  width: 65rem;
+}
+.home .content h3
+{
+  color: var(--black);
+  font-size: 3rem;
+
+
+}
+.home .content h3 span
+{
+  color: darkmagenta;
+}
+
+/*features */
+
+.Features .box-container
+{
+ border: 0px solid;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+ gap: 1.5rem;
+
+}
+
+.Features .box-container .box
+{
+ 
+  padding: 3rem ,2rem;
+  background: white;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.Features .box-container .box:hover
+{
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.Features .box-container .box img
+{
+  margin: 1rem 0;
+  height: 15rem;
+}
+.Features .box-container .box h3
+{
+  font-size: 2.5rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.Features .box-container .box p
+{
+  color: var(--light-color);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+/*features */
+
+/* Products */
+/* Products Section */
+
+.Products .product-slider {
+  border: 0px solid;
+  padding: 1rem;
+
+}
+
+/* Individual Product Box */
+.Products .product-slider .box {
+  border: 0px solid red;
+  background: white;
+  border-radius: .5rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  outline-offset: -1rem;
+  outline: var(--outline);
+  box-shadow: var(--box-shadow);
+  transition: .2s linear;
+
+}
+
+.Products .product-slider .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+/* Product Image */
+.Products .product-slider .box img {
+  height: 20rem;
+  object-fit: cover;
+
+}
+
+/* Product Name */
+.Products .product-slider .box h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  
+
+}
+
+/* Product Price */
+.Products .product-slider .box .price {
+  font-size: 2rem;
+  color: var(--light-color);
+  padding: .5rem 0;
+
+}
+
+/* Product Rating (Stars) */
+.Products .product-slider .box .stars i {
+  font-size: 1.7rem;
+  color: orange;
+  padding: .2rem 0;
+
+}
+
+/* Button */
+.Products .product-slider .box .btn {
+  font-size: 1.6rem;
+  color: white;
+  background: var(--green);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  transition: .3s ease;
+  text-decoration: none;
+}
+
+.Products .product-slider .box .btn:hover {
+  background: var(--dark-green);
+}
+
+
+/* Products */
+.Categories .box-container
+{
+ border: 0px solid;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+ gap: 1.5rem;
+
+}
+.Categories .box-container .box
+{
+   padding: 3rem 0;
+   background: #fff;
+   border-radius:  .5rem ;
+   box-shadow: var(--box-shadow);
+   outline: var(--outline);
+   outline-offset: -1rem;
+   text-align: center;
+
+}
+.Categories .box-container .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+.Categories .box-container .box img
+{
+  margin: 1rem 0;
+  height: 15rem;
+}
+.Categories .box-container .box h3
+{
+  font-size: 2rem;
+  color: var(--black);
+  line-height: 1.8;
+}
+.Categories .box-container .box p
+{
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+/* Swiper Slider Styling */
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-slider .box {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  max-width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-slider .box:hover {
+  transform: translateY(-10px);
+}
+
+.category-slider .box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.category-slider .box h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.category-slider .box p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  margin-bottom: 10px;
+}
+
+.category-slider .box .btn {
+  background-color: var(--green);
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.category-slider .box .btn:hover {
+  background-color: #004d00;
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--green);
+  font-size: 20px;
+}
+.Review .box-container 
+{
+  border: 1px solid;
+  padding: 1rem;
+}
+.Review .box-container .box
+{
+  padding: 3rem 0;
+   background: #fff;
+   border-radius:  .5rem ;
+   box-shadow: var(--box-shadow);
+   outline: var(--outline);
+   outline-offset: -1rem;
+   text-align: center;
+
+}
+.Review .box-container .box :hover
+{
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+.Review .box-container .box img
+{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+.Review .box-container .box p
+{
+  padding: 1rem 0;
+  line-height: 1.8;
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+.Review .box-container .box h3
+{
+  padding-bottom: .5rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  font-size: 2.2rem;
+}
+.Review .box-container .box .stars
+{
+  
+  color: orange;
+  font-size: 1.7rem;
+}
+
+.Footer{
+  background: #fff;
+}
+.Footer .box-container 
+{
+  border: 0px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(26rem, 1fr));
+  gap: 1.5rem;
+}
+.Footer .box-container .box h3
+{
+  font-size: 2.5rem;
+  color: var(--black);
+}
+.Footer .box-container .box h3 i
+{
+  color: var(--green);
+}
+.Footer .box-container .box .links
+{
+  display: block;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+.Footer .box-container .box .links i
+{
+  color: var(--green);
+  padding: .5rem;
+}
+.Footer .box-container .box .links:hover i
+{
+  padding-right: 2rem;
+}
+
+.Footer .box-container .box p
+{
+  line-height: 1.8;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+.Footer .box-container .box .share a
+{
+  border: 0px solid;
+  height:  4rem;
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: .5rem;
+  font-size: 2rem;
+  color: var(--green);
+  margin: .2rem;
+  background: #eee;
+  text-align: center;
+
+}
+.Footer .box-container .box .share a :hover{
+  background: var(--green);
+  color: #fff;
+}
+
+.Footer .box-container .box .email
+{
+  margin: 0.7rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  background: #eee;
+  font-size: 1.6rem;
+  color:  var(--black);
+  text-transform: none;
+}
+.Footer .box-container .box .payment-img
+{
+  margin-top: 2rem;
+  height: 3rem;
+}
+.Footer .Credit
+{
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border-top: var(--border);
+}
+.Footer .Credit span{
+  color: var(--green);
+}
+
+/* media Queries */
+@media (max-width: 991px)
+{
+  html{
+    font-size: 55%;
+  }
+  .header
+  {
+    padding: 2rem;
+  }
+  section 
+  {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px)
+{
+  #menu-btn{
+    display: inline-block;
+  }
+  
+  .header .search-form
+  {
+    width: 90%;
+  }
+
+  .header .navbar
+  {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background: white;
+
+  }
+  .header .navbar a
+  {
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    display: block;
+  }
+  
+}
+
+@media (max-width: 450px)
+{
+  html{
+    font-size: 50%;
+   
+  }
+  .heading
+  {
+    font-size: 2.5rem;
+  }
+  .Footer{
+    text-align: center;
+  }
+  
+}
+
+
+
